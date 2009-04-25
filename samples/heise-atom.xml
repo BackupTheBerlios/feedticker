@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>heise online News</title>
+  <subtitle>Nachrichten nicht nur aus der Welt der Computer</subtitle>
+  <link href="http://www.heise.de/newsticker/" />
+  <link rel="self" href="http://www.heise.de/newsticker/heise-atom.xml" />
+  <updated>2009-02-02T19:12:06+01:00</updated>
+  <author>
+    <name>heise online</name>
+  </author>
+  <id>http://www.heise.de/newsticker/</id>
+
+  <entry>
+    <title>Regulierer legt Terminierungsentgelte im Mobilfunk neu fest</title>
+    <link href="http://www.heise.de/newsticker/Regulierer-legt-Terminierungsentgelte-im-Mobilfunk-neu-fest--/meldung/126759/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126759</id>
+    <updated>2009-02-02T19:12:06+01:00</updated>
+    <summary>Regulierer legt Terminierungsentgelte im Mobilfunk neu fest</summary>
+  </entry>
+
+  <entry>
+    <title>Google Earth 5.0 taucht ab</title>
+    <link href="http://www.heise.de/newsticker/Google-Earth-5-0-taucht-ab--/meldung/126734/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126734</id>
+    <updated>2009-02-02T19:02:18+01:00</updated>
+    <summary>Google Earth 5.0 taucht ab</summary>
+  </entry>
+
+  <entry>
+    <title>Datenschützer weist Vorwürfe der Bahn zurück</title>
+    <link href="http://www.heise.de/newsticker/Datenschuetzer-weist-Vorwuerfe-der-Bahn-zurueck--/meldung/126762/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126762</id>
+    <updated>2009-02-02T19:02:11+01:00</updated>
+    <summary>Datenschützer weist Vorwürfe der Bahn zurück</summary>
+  </entry>
+
+  <entry>
+    <title>Preise für DRAM-Chips steigen nach Qimonda-Insolvenz</title>
+    <link href="http://www.heise.de/newsticker/Preise-fuer-DRAM-Chips-steigen-nach-Qimonda-Insolvenz--/meldung/126753/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126753</id>
+    <updated>2009-02-02T18:47:07+01:00</updated>
+    <summary>Preise für DRAM-Chips steigen nach Qimonda-Insolvenz</summary>
+  </entry>
+
+  <entry>
+    <title>Googles Online-Festplatte nimmt Formen an</title>
+    <link href="http://www.heise.de/newsticker/Googles-Online-Festplatte-nimmt-Formen-an--/meldung/126758/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126758</id>
+    <updated>2009-02-02T18:42:08+01:00</updated>
+    <summary>Googles Online-Festplatte nimmt Formen an</summary>
+  </entry>
+
+  <entry>
+    <title>Sparsames und schnelles RAM für Mobilgeräte</title>
+    <link href="http://www.heise.de/newsticker/Sparsames-und-schnelles-RAM-fuer-Mobilgeraete--/meldung/126747/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126747</id>
+    <updated>2009-02-02T17:22:13+01:00</updated>
+    <summary>Sparsames und schnelles RAM für Mobilgeräte</summary>
+  </entry>
+
+  <entry>
+    <title>Debian 5: Lenny zum Valentinstag</title>
+    <link href="http://www.heise.de/newsticker/Debian-5-Lenny-zum-Valentinstag--/meldung/126752/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126752</id>
+    <updated>2009-02-02T17:22:07+01:00</updated>
+    <summary>Debian 5: Lenny zum Valentinstag</summary>
+  </entry>
+
+  <entry>
+    <title>Webauftritt des Hamburger Abendblatts infiziert [Update]</title>
+    <link href="http://www.heise.de/newsticker/Webauftritt-des-Hamburger-Abendblatts-infiziert-Update--/meldung/126754/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126754</id>
+    <updated>2009-02-02T17:48:09+01:00</updated>
+    <summary>Webauftritt des Hamburger Abendblatts infiziert [Update]</summary>
+  </entry>
+
+  <entry>
+    <title>Kabel BW mit neuem Chef</title>
+    <link href="http://www.heise.de/newsticker/Kabel-BW-mit-neuem-Chef--/meldung/126756/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126756</id>
+    <updated>2009-02-02T17:54:26+01:00</updated>
+    <summary>Kabel BW mit neuem Chef</summary>
+  </entry>
+
+  <entry>
+    <title>Bundestag schafft Grundlage für erweiterte Fahndung im Schengen-Raum</title>
+    <link href="http://www.heise.de/newsticker/Bundestag-schafft-Grundlage-fuer-erweiterte-Fahndung-im-Schengen-Raum--/meldung/126750/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126750</id>
+    <updated>2009-02-02T16:42:08+01:00</updated>
+    <summary>Bundestag schafft Grundlage für erweiterte Fahndung im Schengen-Raum</summary>
+  </entry>
+
+  <entry>
+    <title>Internetnutzer: Mac OS legt zu, Windows leicht rückläufig</title>
+    <link href="http://www.heise.de/newsticker/Internetnutzer-Mac-OS-legt-zu-Windows-leicht-ruecklaeufig--/meldung/126723/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126723</id>
+    <updated>2009-02-02T18:50:06+01:00</updated>
+    <summary>Internetnutzer: Mac OS legt zu, Windows leicht rückläufig</summary>
+  </entry>
+
+  <entry>
+    <title>Infineon will zur Nummer eins bei Autochips aufsteigen</title>
+    <link href="http://www.heise.de/newsticker/Infineon-will-zur-Nummer-eins-bei-Autochips-aufsteigen--/meldung/126745/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126745</id>
+    <updated>2009-02-02T15:52:52+01:00</updated>
+    <summary>Infineon will zur Nummer eins bei Autochips aufsteigen</summary>
+  </entry>
+
+  <entry>
+    <title>Google überholt Yahoo als reichweitenstärkstes US-Webangebot</title>
+    <link href="http://www.heise.de/newsticker/Google-ueberholt-Yahoo-als-reichweitenstaerkstes-US-Webangebot--/meldung/126732/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126732</id>
+    <updated>2009-02-02T16:31:15+01:00</updated>
+    <summary>Google überholt Yahoo als reichweitenstärkstes US-Webangebot</summary>
+  </entry>
+
+  <entry>
+    <title>Facebook setzt auf neue Vermarktungsstrategie [Update]</title>
+    <link href="http://www.heise.de/newsticker/Facebook-setzt-auf-neue-Vermarktungsstrategie-Update--/meldung/126714/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126714</id>
+    <updated>2009-02-02T18:18:23+01:00</updated>
+    <summary>Facebook setzt auf neue Vermarktungsstrategie [Update]</summary>
+  </entry>
+
+  <entry>
+    <title>Astra schlägt Bundesregierung Breitband-Versorgung über Satellit vor</title>
+    <link href="http://www.heise.de/newsticker/Astra-schlaegt-Bundesregierung-Breitband-Versorgung-ueber-Satellit-vor--/meldung/126740/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126740</id>
+    <updated>2009-02-02T15:23:26+01:00</updated>
+    <summary>Astra schlägt Bundesregierung Breitband-Versorgung über Satellit vor</summary>
+  </entry>
+
+  <entry>
+    <title>Erneute Krypto-Panne bei billigen USB-Festplattengehäusen</title>
+    <link href="http://www.heise.de/newsticker/Erneute-Krypto-Panne-bei-billigen-USB-Festplattengehaeusen--/meldung/126735/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126735</id>
+    <updated>2009-02-02T15:27:05+01:00</updated>
+    <summary>Erneute Krypto-Panne bei billigen USB-Festplattengehäusen</summary>
+  </entry>
+
+  <entry>
+    <title>AMD-AM3-Prozessoren tauchen bei Online-Händlern auf</title>
+    <link href="http://www.heise.de/newsticker/AMD-AM3-Prozessoren-tauchen-bei-Online-Haendlern-auf--/meldung/126729/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126729</id>
+    <updated>2009-02-02T16:30:05+01:00</updated>
+    <summary>AMD-AM3-Prozessoren tauchen bei Online-Händlern auf</summary>
+  </entry>
+
+  <entry>
+    <title>Fujitsu stellt Produktion von Schreibleseköpfen für Festplatten ein</title>
+    <link href="http://www.heise.de/newsticker/Fujitsu-stellt-Produktion-von-Schreiblesekoepfen-fuer-Festplatten-ein--/meldung/126731/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126731</id>
+    <updated>2009-02-02T14:37:38+01:00</updated>
+    <summary>Fujitsu stellt Produktion von Schreibleseköpfen für Festplatten ein</summary>
+  </entry>
+
+  <entry>
+    <title>Noch viele offene Fragen bei Kinderporno-Sperren</title>
+    <link href="http://www.heise.de/newsticker/Noch-viele-offene-Fragen-bei-Kinderporno-Sperren--/meldung/126726/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126726</id>
+    <updated>2009-02-02T15:46:54+01:00</updated>
+    <summary>Noch viele offene Fragen bei Kinderporno-Sperren</summary>
+  </entry>
+
+  <entry>
+    <title>Buchhandel wirft Kultusministerkonferenz "Enteignung von Autoren" vor</title>
+    <link href="http://www.heise.de/newsticker/Buchhandel-wirft-Kultusministerkonferenz-Enteignung-von-Autoren-vor--/meldung/126724/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126724</id>
+    <updated>2009-02-02T13:38:12+01:00</updated>
+    <summary>Buchhandel wirft Kultusministerkonferenz "Enteignung von Autoren" vor</summary>
+  </entry>
+
+  <entry>
+    <title>Automatisierung im Rechenzentrum mit Parallels</title>
+    <link href="http://www.heise.de/newsticker/Automatisierung-im-Rechenzentrum-mit-Parallels--/meldung/126719/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126719</id>
+    <updated>2009-02-02T13:18:37+01:00</updated>
+    <summary>Automatisierung im Rechenzentrum mit Parallels</summary>
+  </entry>
+
+  <entry>
+    <title>Hessens CDU/FDP-Koalition plant Internetwahlen</title>
+    <link href="http://www.heise.de/newsticker/Hessens-CDU-FDP-Koalition-plant-Internetwahlen--/meldung/126722/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126722</id>
+    <updated>2009-02-02T13:14:00+01:00</updated>
+    <summary>Hessens CDU/FDP-Koalition plant Internetwahlen</summary>
+  </entry>
+
+  <entry>
+    <title>Qimonda-Partner Winbond wartet auf 20,6 Millionen Euro</title>
+    <link href="http://www.heise.de/newsticker/Qimonda-Partner-Winbond-wartet-auf-20-6-Millionen-Euro--/meldung/126717/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126717</id>
+    <updated>2009-02-02T13:12:14+01:00</updated>
+    <summary>Qimonda-Partner Winbond wartet auf 20,6 Millionen Euro</summary>
+  </entry>
+
+  <entry>
+    <title>Weihnachtsgeschäft 2008 beschert Online-Händlern Besucherplus</title>
+    <link href="http://www.heise.de/newsticker/Weihnachtsgeschaeft-2008-beschert-Online-Haendlern-Besucherplus--/meldung/126713/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126713</id>
+    <updated>2009-02-02T12:23:41+01:00</updated>
+    <summary>Weihnachtsgeschäft 2008 beschert Online-Händlern Besucherplus</summary>
+  </entry>
+
+  <entry>
+    <title>Open-Source-Entwickler treffen sich in Brüssel</title>
+    <link href="http://www.heise.de/newsticker/Open-Source-Entwickler-treffen-sich-in-Bruessel--/meldung/126718/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126718</id>
+    <updated>2009-02-02T11:54:41+01:00</updated>
+    <summary>Open-Source-Entwickler treffen sich in Brüssel</summary>
+  </entry>
+
+  <entry>
+    <title>Deutschland-Start für Sonys E-Book-Reader im März</title>
+    <link href="http://www.heise.de/newsticker/Deutschland-Start-fuer-Sonys-E-Book-Reader-im-Maerz--/meldung/126712/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126712</id>
+    <updated>2009-02-02T12:15:44+01:00</updated>
+    <summary>Deutschland-Start für Sonys E-Book-Reader im März</summary>
+  </entry>
+
+  <entry>
+    <title>Fünf Jahre Eclipse Foundation</title>
+    <link href="http://www.heise.de/newsticker/Fuenf-Jahre-Eclipse-Foundation--/meldung/126706/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126706</id>
+    <updated>2009-02-02T11:18:01+01:00</updated>
+    <summary>Fünf Jahre Eclipse Foundation</summary>
+  </entry>
+
+  <entry>
+    <title>Stabiles Ruby 1.9.1 erschienen</title>
+    <link href="http://www.heise.de/newsticker/Stabiles-Ruby-1-9-1-erschienen--/meldung/126709/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126709</id>
+    <updated>2009-02-02T11:35:50+01:00</updated>
+    <summary>Stabiles Ruby 1.9.1 erschienen</summary>
+  </entry>
+
+  <entry>
+    <title>Bericht: Unsichere Verarbeitung der Fingerabdrücke in Meldebehörden</title>
+    <link href="http://www.heise.de/newsticker/Bericht-Unsichere-Verarbeitung-der-Fingerabdruecke-in-Meldebehoerden--/meldung/126707/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126707</id>
+    <updated>2009-02-02T10:34:48+01:00</updated>
+    <summary>Bericht: Unsichere Verarbeitung der Fingerabdrücke in Meldebehörden</summary>
+  </entry>
+
+  <entry>
+    <title>Datenaffäre: Gewerkschaften verlangen von Bahn-Chef Entschuldigung</title>
+    <link href="http://www.heise.de/newsticker/Datenaffaere-Gewerkschaften-verlangen-von-Bahn-Chef-Entschuldigung--/meldung/126705/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126705</id>
+    <updated>2009-02-02T11:03:24+01:00</updated>
+    <summary>Datenaffäre: Gewerkschaften verlangen von Bahn-Chef Entschuldigung</summary>
+  </entry>
+
+  <entry>
+    <title>USK prüfte voriges Jahr 2960 Spiele</title>
+    <link href="http://www.heise.de/newsticker/USK-pruefte-voriges-Jahr-2960-Spiele--/meldung/126704/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126704</id>
+    <updated>2009-02-02T11:18:34+01:00</updated>
+    <summary>USK prüfte voriges Jahr 2960 Spiele</summary>
+  </entry>
+
+  <entry>
+    <title>Kostengünstige Meerwasserentsalzung</title>
+    <link href="http://www.heise.de/newsticker/Kostenguenstige-Meerwasserentsalzung--/meldung/126702/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126702</id>
+    <updated>2009-02-02T09:13:51+01:00</updated>
+    <summary>Kostengünstige Meerwasserentsalzung</summary>
+  </entry>
+
+  <entry>
+    <title>Nokia drückt Überwachungsrechte für E-Mails durch</title>
+    <link href="http://www.heise.de/newsticker/Nokia-drueckt-Ueberwachungsrechte-fuer-E-Mails-durch--/meldung/126697/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126697</id>
+    <updated>2009-02-02T11:35:33+01:00</updated>
+    <summary>Nokia drückt Überwachungsrechte für E-Mails durch</summary>
+  </entry>
+
+  <entry>
+    <title>Kanzlerin will Breitbandausbau forcieren</title>
+    <link href="http://www.heise.de/newsticker/Kanzlerin-will-Breitbandausbau-forcieren--/meldung/126696/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126696</id>
+    <updated>2009-02-02T09:13:45+01:00</updated>
+    <summary>Kanzlerin will Breitbandausbau forcieren</summary>
+  </entry>
+
+  <entry>
+    <title>340.000 Euro Spenden für deutsche Wikipedia</title>
+    <link href="http://www.heise.de/newsticker/340-000-Euro-Spenden-fuer-deutsche-Wikipedia--/meldung/126695/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126695</id>
+    <updated>2009-02-01T17:06:47+01:00</updated>
+    <summary>340.000 Euro Spenden für deutsche Wikipedia</summary>
+  </entry>
+
+  <entry>
+    <title>Windows 7: Nächster Meilenstein Release Candidate</title>
+    <link href="http://www.heise.de/newsticker/Windows-7-Naechster-Meilenstein-Release-Candidate--/meldung/126693/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126693</id>
+    <updated>2009-02-02T09:13:21+01:00</updated>
+    <summary>Windows 7: Nächster Meilenstein Release Candidate</summary>
+  </entry>
+
+  <entry>
+    <title>3DTV-Experimente zum Super Bowl</title>
+    <link href="http://www.heise.de/newsticker/3DTV-Experimente-zum-Super-Bowl--/meldung/126691/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126691</id>
+    <updated>2009-02-02T10:08:40+01:00</updated>
+    <summary>3DTV-Experimente zum Super Bowl</summary>
+  </entry>
+
+  <entry>
+    <title>Windows 7: Sicherheitslücke in Beta-Version</title>
+    <link href="http://www.heise.de/newsticker/Windows-7-Sicherheitsluecke-in-Beta-Version--/meldung/126692/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126692</id>
+    <updated>2009-02-02T11:08:31+01:00</updated>
+    <summary>Windows 7: Sicherheitslücke in Beta-Version</summary>
+  </entry>
+
+  <entry>
+    <title>Premiere: Freie Bahn für News Corp</title>
+    <link href="http://www.heise.de/newsticker/Premiere-Freie-Bahn-fuer-News-Corp--/meldung/126690/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126690</id>
+    <updated>2009-02-02T09:13:05+01:00</updated>
+    <summary>Premiere: Freie Bahn für News Corp</summary>
+  </entry>
+
+  <entry>
+    <title>Was war. Was wird.</title>
+    <link href="http://www.heise.de/newsticker/Was-war-Was-wird--/meldung/126686/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126686</id>
+    <updated>2009-02-01T00:07:08+01:00</updated>
+    <summary>Was war. Was wird.</summary>
+  </entry>
+
+  <entry>
+    <title>Patches für VMware ESXi und ESX</title>
+    <link href="http://www.heise.de/newsticker/Patches-fuer-VMware-ESXi-und-ESX--/meldung/126684/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126684</id>
+    <updated>2009-02-01T00:16:41+01:00</updated>
+    <summary>Patches für VMware ESXi und ESX</summary>
+  </entry>
+
+  <entry>
+    <title>So klingt die Finanzkrise: Musik aus Aktienkursen</title>
+    <link href="http://www.heise.de/newsticker/So-klingt-die-Finanzkrise-Musik-aus-Aktienkursen--/meldung/126685/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126685</id>
+    <updated>2009-02-01T18:50:34+01:00</updated>
+    <summary>So klingt die Finanzkrise: Musik aus Aktienkursen</summary>
+  </entry>
+
+  <entry>
+    <title>Alarmierende Fehlerquote in französischer Polizeidatenbank</title>
+    <link href="http://www.heise.de/newsticker/Alarmierende-Fehlerquote-in-franzoesischer-Polizeidatenbank--/meldung/126680/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126680</id>
+    <updated>2009-01-31T17:17:57+01:00</updated>
+    <summary>Alarmierende Fehlerquote in französischer Polizeidatenbank</summary>
+  </entry>
+
+  <entry>
+    <title>Google warnt bei allen Suchtreffern vor Malware [Update]</title>
+    <link href="http://www.heise.de/newsticker/Google-warnt-bei-allen-Suchtreffern-vor-Malware-Update--/meldung/126681/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126681</id>
+    <updated>2009-01-31T21:21:21+01:00</updated>
+    <summary>Google warnt bei allen Suchtreffern vor Malware [Update]</summary>
+  </entry>
+
+  <entry>
+    <title>OLPC-Projekt will Hardware-Spezifikationen freigeben</title>
+    <link href="http://www.heise.de/newsticker/OLPC-Projekt-will-Hardware-Spezifikationen-freigeben--/meldung/126675/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126675</id>
+    <updated>2009-02-02T09:12:42+01:00</updated>
+    <summary>OLPC-Projekt will Hardware-Spezifikationen freigeben</summary>
+  </entry>
+
+  <entry>
+    <title>Privatsender wollen Online-Expansion der ARD bremsen</title>
+    <link href="http://www.heise.de/newsticker/Privatsender-wollen-Online-Expansion-der-ARD-bremsen--/meldung/126678/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126678</id>
+    <updated>2009-01-31T15:43:50+01:00</updated>
+    <summary>Privatsender wollen Online-Expansion der ARD bremsen</summary>
+  </entry>
+
+  <entry>
+    <title>Höttges soll Finanzvorstand der Telekom werden</title>
+    <link href="http://www.heise.de/newsticker/Hoettges-soll-Finanzvorstand-der-Telekom-werden--/meldung/126679/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126679</id>
+    <updated>2009-01-31T15:14:14+01:00</updated>
+    <summary>Höttges soll Finanzvorstand der Telekom werden</summary>
+  </entry>
+
+  <entry>
+    <title>Lernen mit Spielen: Serious games</title>
+    <link href="http://www.heise.de/newsticker/Lernen-mit-Spielen-Serious-games--/meldung/126674/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126674</id>
+    <updated>2009-01-31T15:01:35+01:00</updated>
+    <summary>Lernen mit Spielen: Serious games</summary>
+  </entry>
+
+  <entry>
+    <title>Offline Gmail auch für deutsche Benutzer</title>
+    <link href="http://www.heise.de/newsticker/Offline-Gmail-auch-fuer-deutsche-Benutzer--/meldung/126673/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126673</id>
+    <updated>2009-02-02T10:07:19+01:00</updated>
+    <summary>Offline Gmail auch für deutsche Benutzer</summary>
+  </entry>
+
+  <entry>
+    <title>Bill Gates erwartet vier dürre Jahre</title>
+    <link href="http://www.heise.de/newsticker/Bill-Gates-erwartet-vier-duerre-Jahre--/meldung/126672/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126672</id>
+    <updated>2009-02-02T09:14:00+01:00</updated>
+    <summary>Bill Gates erwartet vier dürre Jahre</summary>
+  </entry>
+
+  <entry>
+    <title>Wettfahrt für autonome Miniatur-Autos</title>
+    <link href="http://www.heise.de/newsticker/Wettfahrt-fuer-autonome-Miniatur-Autos--/meldung/126671/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126671</id>
+    <updated>2009-02-02T11:46:32+01:00</updated>
+    <summary>Wettfahrt für autonome Miniatur-Autos</summary>
+  </entry>
+
+  <entry>
+    <title>Filme interaktiv mit Microsoft-Silverlight-Technik</title>
+    <link href="http://www.heise.de/newsticker/Filme-interaktiv-mit-Microsoft-Silverlight-Technik--/meldung/126669/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126669</id>
+    <updated>2009-02-02T13:12:50+01:00</updated>
+    <summary>Filme interaktiv mit Microsoft-Silverlight-Technik</summary>
+  </entry>
+
+  <entry>
+    <title>LED-Produktion deutlich preisgünstiger</title>
+    <link href="http://www.heise.de/newsticker/LED-Produktion-deutlich-preisguenstiger--/meldung/126668/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126668</id>
+    <updated>2009-02-02T09:15:26+01:00</updated>
+    <summary>LED-Produktion deutlich preisgünstiger</summary>
+  </entry>
+
+  <entry>
+    <title>Polizei untersucht sogenannten Cyber-Diebstahl bei Online-Spiel</title>
+    <link href="http://www.heise.de/newsticker/Polizei-untersucht-sogenannten-Cyber-Diebstahl-bei-Online-Spiel--/meldung/126670/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126670</id>
+    <updated>2009-01-31T13:20:07+01:00</updated>
+    <summary>Polizei untersucht sogenannten Cyber-Diebstahl bei Online-Spiel</summary>
+  </entry>
+
+  <entry>
+    <title>Sony legt LCD-Beteiligung bei Sharp auf Eis</title>
+    <link href="http://www.heise.de/newsticker/Sony-legt-LCD-Beteiligung-bei-Sharp-auf-Eis--/meldung/126658/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126658</id>
+    <updated>2009-01-31T10:12:08+01:00</updated>
+    <summary>Sony legt LCD-Beteiligung bei Sharp auf Eis</summary>
+  </entry>
+
+  <entry>
+    <title>Krise erfasst IT-Arbeitsmarkt</title>
+    <link href="http://www.heise.de/newsticker/Krise-erfasst-IT-Arbeitsmarkt--/meldung/125066/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/125066</id>
+    <updated>2009-01-31T10:02:10+01:00</updated>
+    <summary>Krise erfasst IT-Arbeitsmarkt</summary>
+  </entry>
+
+  <entry>
+    <title>Biene-Preise für barrierefreie Websites verliehen</title>
+    <link href="http://www.heise.de/newsticker/Biene-Preise-fuer-barrierefreie-Websites-verliehen--/meldung/126648/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126648</id>
+    <updated>2009-02-02T11:30:47+01:00</updated>
+    <summary>Biene-Preise für barrierefreie Websites verliehen</summary>
+  </entry>
+
+  <entry>
+    <title>Nachgelegt: neue Treiberversionen für Windows</title>
+    <link href="http://www.heise.de/newsticker/Nachgelegt-neue-Treiberversionen-fuer-Windows--/meldung/126664/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126664</id>
+    <updated>2009-01-31T14:16:55+01:00</updated>
+    <summary>Nachgelegt: neue Treiberversionen für Windows</summary>
+  </entry>
+
+  <entry>
+    <title>Dell: 15-Zoll-Notebook zum Netbook-Preis</title>
+    <link href="http://www.heise.de/newsticker/Dell-15-Zoll-Notebook-zum-Netbook-Preis--/meldung/126656/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126656</id>
+    <updated>2009-01-30T17:57:10+01:00</updated>
+    <summary>Dell: 15-Zoll-Notebook zum Netbook-Preis</summary>
+  </entry>
+
+  <entry>
+    <title>Preisverfall sorgt für rote Zahlen bei Toshiba</title>
+    <link href="http://www.heise.de/newsticker/Preisverfall-sorgt-fuer-rote-Zahlen-bei-Toshiba--/meldung/126663/from/atom10" />
+    <id>http://www.heise.de/newsticker/meldung/126663</id>
+    <updated>2009-01-30T17:52:09+01:00</updated>
+    <summary>Preisverfall sorgt für rote Zahlen bei Toshiba</summary>
+  </entry>
+
+</feed>

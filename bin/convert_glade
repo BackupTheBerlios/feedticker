@@ -1,0 +1,61 @@
+#!/bin/sh
+
+INFILE=
+OUTFILE=
+
+########################################################################
+#
+usage()
+{
+    printf "%s [-i inputfile] -o outputfile\n" $0
+    printf "\n\t-i inputfile   if not given, input will be read from stdin\n"
+    printf "\n\n"
+}
+
+########################################################################
+#
+convert_to_c()
+{
+    BUFNAME=`basename $OUTFILE | sed -e 's/-/_/g' | sed -e 's/\./_/g'`
+
+    echo "/* FILE IS GENERATED. DO NOT MODIFY */" > $OUTFILE
+    echo "" >> $OUTFILE
+    echo "static const gchar $BUFNAME[] =" >>$OUTFILE
+    # quote all strings
+    # remove leading spaces and tabs and add leading "
+    # add trailing "
+    sed -e 's/"/\\"/g' $INFILE | \
+    sed -e 's/^[ \t]*/"/' | \
+    sed -e 's/$/"/' >>$OUTFILE
+
+    echo ";" >> $OUTFILE
+}
+
+########################################################################
+# main
+while getopts "i:o:" FLAG ; do
+    case $FLAG in
+        i)  INFILE=$OPTARG
+            ;;
+        o)  OUTFILE=$OPTARG
+            ;;
+        *)  usage
+            ;;
+    esac
+done
+
+if [ -z $OUTFILE ] ; then
+    usage
+    exit 2
+fi
+
+if [ -z $INFILE ] ; then
+    INFILE=/dev/stdin
+fi
+
+if [ ! -r $INFILE ] ; then
+  echo "cant' read $INFILE"
+  exit 3
+fi
+
+convert_to_c
