@@ -48,7 +48,8 @@ SRCS=main.cc			\
      $(PARSER_DIR)/rss.cc
 
 GLADES=$(SRC_DIR)/popupmenu.ui		\
-       $(SRC_DIR)/feedsetup.ui	
+       $(SRC_DIR)/feedsetup.ui		\
+       $(SRC_DIR)/globalconfig.ui
 
 all: makeit
 .PHONY: all clean parallel makeit

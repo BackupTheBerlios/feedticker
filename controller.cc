@@ -221,7 +221,7 @@ void RSS::Controller::setupLayoutFeed()
     }
 }
 
-/*
+/**
  *
  * name: unbekannt
  * @param
@@ -232,7 +232,7 @@ void RSS::Controller::timeout()
     setupLayoutFeed();
 }
 
-/*
+/**
  *
  * name: g_timeout
  * @param
@@ -245,11 +245,10 @@ gboolean RSS::Controller::timeout(gpointer  data)
     return TRUE;
 }
 
-/*
+/**
  *
- * name: unbekannt
- * @param
- * @return
+ * name: RSS::Controller::readTickerFromGconf
+ * @return RSS::StringList
  */
 RSS::StringList RSS::Controller::readTickerFromGconf()
 {
@@ -393,6 +392,7 @@ void RSS::Controller::run()
     if (tickerList.empty())
     {
         Configuration  *cfg = new Configuration(this);
+        cfg->setNewTicker (true);
         cfg->showTickerConfigDialog();
     }
     else
