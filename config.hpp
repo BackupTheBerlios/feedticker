@@ -27,7 +27,7 @@
 #include "settings.hpp"
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
-#define GCONF_SCHEMA  "/apps/rssticker"
+#define GCONF_SCHEMA  "/apps/feedticker"
 
 namespace RSS
 {

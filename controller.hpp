@@ -1,5 +1,5 @@
 /**
- * @file rss.hpp
+ * @file controller.hpp
  *
  * Copyright (C) 2009 T. Kordelle (feedthk@users.berlios.de)
  *
@@ -18,8 +18,8 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
-#ifndef __RSS_HPP__
-#define __RSS_HPP__
+#ifndef __CONTROLLER_HPP__
+#define __CONTROLLER_HPP__
 
 #include <gtk/gtk.h>
 
@@ -28,6 +28,7 @@
 
 #include "layout.hpp"
 #include "config.hpp"
+#include "globalconfig.hpp"
 
 namespace RSS
 {
@@ -39,7 +40,9 @@ namespace RSS
         private:
             GtkBuilder          *gtkBuilder;
             LayoutMap            layoutMap;
+            GlobalConfig         globalConfig;
             ButtonCallbackPtr    btnNewTicker;
+            ButtonCallbackPtr    btnGlobalConfig;
 
             bool parseRssFeed(const char *filename, AbstractLayoutPtr  &layoutPtr);
             bool loadFeed(const std::string  &url, const std::string &favicon, AbstractLayoutPtr  &layoutPtr);
@@ -51,6 +54,7 @@ namespace RSS
             RSS::StringList readTickerFromGconf();
 
             void addNewTicker();
+            void showGlobalConfig();
 
         public:
             Controller();
@@ -71,6 +75,10 @@ namespace RSS
             inline guint getTickerCount() const {
                 return layoutMap.size();
             }
+            
+            inline const GlobalConfig& getGlobalConfig() const {
+                return globalConfig;
+            }
 
             /* */
             static void init();
@@ -80,4 +88,4 @@ namespace RSS
     };
 }
 
-#endif /* __RSS_HPP__ */
+#endif /* __CONTROLLER_HPP__ */

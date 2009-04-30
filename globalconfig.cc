@@ -18,7 +18,17 @@
  * Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
  */
 
+#include <gconf/gconf-client.h>
+
+#include "controller.hpp"
+#include "globalconfig.hpp"
+#include "config.hpp"
+#include "message.hpp"
+
 #include "globalconfig.ui"
+
+/*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+#define GCONF_PROXY   GCONF_SCHEMA "/proxy"
 
 /**
  *
@@ -26,8 +36,18 @@
  * @param
  * @return
  */
-RSS::GlobalConfig::GlobalConfig()
+RSS::GlobalConfig::GlobalConfig(Controller  &control)
+                 : controller(control)
 {
+    readConfigFromGConf();
+    
+    GError  *error    = NULL;
+    gint     ret_code = gtk_builder_add_from_string (controller.getGtkBuilder(), globalconfig_ui, -1, &error);
+    if (ret_code == 0)
+    {
+        SHOW_GERROR_MESSAGE ("Unable to create global config dialog.", error);
+        return;
+    }
 }
 
 /**
@@ -38,4 +58,60 @@ RSS::GlobalConfig::GlobalConfig()
  */
 RSS::GlobalConfig::~GlobalConfig()
 {
+}
+
+/**
+ * 
+ * name: unbekannt
+ * @param
+ * @return
+ */
+void RSS::GlobalConfig::showDialog()
+{
+    
+}
+
+/**
+ * 
+ * name: unbekannt
+ * @param
+ * @return
+ */
+void RSS::GlobalConfig::readConfigFromGConf()
+{
+    GConfClient   *client = gconf_client_get_default();
+    gchar         *gProxy;
+    
+    gProxy = gconf_client_get_string (client, GCONF_PROXY, NULL);
+    if (gProxy != NULL)
+    {
+        proxy = gProxy;
+        g_free (gProxy);
+    }
+    
+    g_object_unref (client);
+}
+
+/**
+ * 
+ * name: unbekannt
+ * @param
+ * @return
+ */
+void RSS::GlobalConfig::writeConfigToGConf()
+{
+    GError      *error = NULL;
+    GConfClient *client = gconf_client_get_default();
+
+    if (!proxy.empty())
+    {
+        if (!gconf_client_set_string (client, GCONF_PROXY, proxy.c_str(), &error))
+            SHOW_GERROR_MESSAGE ("Error while storing proxy settings.", error);
+    }
+    else
+    {
+        gconf_client_unset (client, GCONF_PROXY, NULL);
+    }
+    
+    g_object_unref (client);
 }

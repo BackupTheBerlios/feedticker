@@ -55,7 +55,8 @@ typedef boost::shared_ptr<char>  CharPtr;
  * @return  RSS::Controller*
  */
 RSS::Controller::Controller()
-               : gtkBuilder(NULL)
+               : gtkBuilder(NULL),
+                 globalConfig((*this))
 {
     /* load the interface */
     gtkBuilder = gtk_builder_new ();
@@ -172,6 +173,16 @@ bool RSS::Controller::loadFeed(const std::string  &url,
             SHOW_ERROR_MESSAGE ("curl_easy_setopt failed.", curl_easy_strerror(curlError));
             return false;
         }
+        
+        if (!globalConfig.getProxy().empty())
+        {
+            if ((curlError = curl_easy_setopt(curlHandle.get(), CURLOPT_PROXY, globalConfig.getProxy().c_str())) != CURLE_OK)
+            {
+                SHOW_ERROR_MESSAGE ("curl_easy_setopt (proxy) failed.", curl_easy_strerror(curlError));
+                return false;
+            }
+        }
+        
         if ((curlError = curl_easy_perform (curlHandle.get())) != CURLE_OK)
         {
             SHOW_ERROR_MESSAGE ("curl_easy_perform failed.", curl_easy_strerror(curlError));
@@ -192,11 +203,10 @@ bool RSS::Controller::loadFeed(const std::string  &url,
     return true;
 }
 
-/*
+/**
  *
- * name: unbekannt
- * @param
- * @return
+ * name: RSS::Controller::setupLayoutFeed()
+ * @return void
  */
 void RSS::Controller::setupLayoutFeed()
 {
@@ -217,6 +227,9 @@ void RSS::Controller::setupLayoutFeed()
         {
             GObject  *obj = gtk_builder_get_object (getGtkBuilder(), "mi_new_ticker");
             btnNewTicker = ButtonCallbackPtr(new RSS::ButtonCallback(obj, "activate", boost::bind(&RSS::Controller::addNewTicker, this)));
+            
+            obj             = gtk_builder_get_object (getGtkBuilder(), "mi_global_config");
+            btnGlobalConfig = ButtonCallbackPtr(new RSS::ButtonCallback(obj, "activate", boost::bind(&RSS::Controller::showGlobalConfig, this)));
         }
     }
 }
@@ -375,6 +388,16 @@ void RSS::Controller::addNewTicker()
     Configuration  *cfg = new Configuration(this);
     cfg->setNewTicker (true);
     cfg->showTickerConfigDialog();
+}
+
+/*
+ * 
+ * name: unbekannt
+ * @param
+ * @return
+ */
+void RSS::Controller::showGlobalConfig()
+{
 }
 
 /*

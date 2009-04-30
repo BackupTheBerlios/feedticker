@@ -199,7 +199,6 @@ void RSS::Configuration::showTickerConfigDialog()
         if (ret_code == 0)
         {
             SHOW_GERROR_MESSAGE ("Unable to crate Feeddialog.", error);
-            g_error_free (error);
             return;
         }
 

@@ -30,7 +30,8 @@ OBJS=$(OBJ_DIR)/main.o		\
      $(OBJ_DIR)/settings.o	\
      $(OBJ_DIR)/browser.o	\
      $(OBJ_DIR)/message.o	\
-     $(OBJ_DIR)/callback.o
+     $(OBJ_DIR)/callback.o	\
+     $(OBJ_DIR)/globalconfig.o
 
 SRCS=main.cc			\
      popupmenu.cc		\
@@ -41,6 +42,7 @@ SRCS=main.cc			\
      settings.cc		\
      message.cc			\
      callback.cc		\
+     globalconfig.cc		\
      $(UTIL_DIR)/xmlstring.cc	\
      $(UTIL_DIR)/browser.cc	\
      $(PARSER_DIR)/parser.cc	\

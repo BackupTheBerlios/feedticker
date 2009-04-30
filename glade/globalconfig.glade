@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
-<!--Generated with glade3 3.4.5 on Wed Apr 29 21:40:52 2009 -->
+<!--Generated with glade3 3.4.5 on Thu Apr 30 15:17:32 2009 -->
 <glade-interface>
   <widget class="GtkWindow" id="window1">
     <child>
@@ -34,22 +34,18 @@
                 <child>
                   <widget class="GtkTable" id="table1">
                     <property name="visible">True</property>
-                    <property name="n_rows">2</property>
                     <property name="n_columns">2</property>
                     <property name="column_spacing">2</property>
                     <property name="row_spacing">2</property>
                     <child>
-                      <widget class="GtkSpinButton" id="spinbutton1">
+                      <widget class="GtkLabel" id="label2">
                         <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="adjustment">8080 1 65535 1 10 10</property>
-                        <property name="numeric">True</property>
+                        <property name="tooltip_text">http://proxyhost:port</property>
+                        <property name="label" translatable="yes">Host:</property>
                       </widget>
                       <packing>
-                        <property name="left_attach">1</property>
-                        <property name="right_attach">2</property>
-                        <property name="top_attach">1</property>
-                        <property name="bottom_attach">2</property>
+                        <property name="x_options">GTK_FILL</property>
+                        <property name="y_options">GTK_FILL</property>
                       </packing>
                     </child>
                     <child>
@@ -60,28 +56,6 @@
                       <packing>
                         <property name="left_attach">1</property>
                         <property name="right_attach">2</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <widget class="GtkLabel" id="label3">
-                        <property name="visible">True</property>
-                        <property name="label" translatable="yes">Port:</property>
-                      </widget>
-                      <packing>
-                        <property name="top_attach">1</property>
-                        <property name="bottom_attach">2</property>
-                        <property name="x_options">GTK_FILL</property>
-                        <property name="y_options">GTK_FILL</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <widget class="GtkLabel" id="label2">
-                        <property name="visible">True</property>
-                        <property name="label" translatable="yes">Host:</property>
-                      </widget>
-                      <packing>
-                        <property name="x_options">GTK_FILL</property>
-                        <property name="y_options">GTK_FILL</property>
                       </packing>
                     </child>
                   </widget>
