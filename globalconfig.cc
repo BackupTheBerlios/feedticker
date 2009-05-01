@@ -20,6 +20,8 @@
 
 #include <gconf/gconf-client.h>
 
+#include <boost/bind.hpp>
+
 #include "controller.hpp"
 #include "globalconfig.hpp"
 #include "config.hpp"
@@ -37,17 +39,22 @@
  * @return
  */
 RSS::GlobalConfig::GlobalConfig(Controller  &control)
-                 : controller(control)
+                 : controller(control),
+                   gtkWindow(NULL)
 {
     readConfigFromGConf();
-    
-    GError  *error    = NULL;
-    gint     ret_code = gtk_builder_add_from_string (controller.getGtkBuilder(), globalconfig_ui, -1, &error);
-    if (ret_code == 0)
-    {
-        SHOW_GERROR_MESSAGE ("Unable to create global config dialog.", error);
-        return;
-    }
+}
+
+/**
+ *
+ * name: RSS::GlobalConfig::~GlobalConfig
+ * @param
+ * @return
+ */
+RSS::GlobalConfig::~GlobalConfig()
+{
+    if (GTK_IS_WINDOW (gtkWindow))
+        gtk_widget_hide_all (GTK_WIDGET (gtkWindow));
 }
 
 /**
@@ -56,23 +63,33 @@ RSS::GlobalConfig::GlobalConfig(Controller  &control)
  * @param
  * @return
  */
-RSS::GlobalConfig::~GlobalConfig()
-{
-}
-
-/**
- * 
- * name: unbekannt
- * @param
- * @return
- */
 void RSS::GlobalConfig::showDialog()
 {
-    
+    if (gtkWindow == NULL)
+    {
+        GObject  *obj;
+        GError   *error    = NULL;
+        gint      ret_code = gtk_builder_add_from_string (controller.getGtkBuilder(), globalconfig_ui, -1, &error);
+        if (ret_code == 0)
+        {
+            SHOW_GERROR_MESSAGE ("Unable to create global config dialog.", error);
+            return;
+        }
+
+        gtkWindow = GTK_WINDOW (gtk_builder_get_object (controller.getGtkBuilder(), "globalConfigWindow"));
+
+        obj       = gtk_builder_get_object (controller.getGtkBuilder(), "btnSave");
+        btnCbSave = ButtonCallbackPtr(new RSS::ButtonCallback(obj, "clicked", boost::bind(&RSS::GlobalConfig::buttonSaveActivate, this)));
+
+        obj         = gtk_builder_get_object (controller.getGtkBuilder(), "btnSave");
+        btnCbCancel = ButtonCallbackPtr(new RSS::ButtonCallback(obj, "clicked", boost::bind(&RSS::GlobalConfig::buttonCancelActivate, this)));
+    }
+
+    gtk_widget_show_all (GTK_WIDGET (gtkWindow));
 }
 
 /**
- * 
+ *
  * name: unbekannt
  * @param
  * @return
@@ -81,19 +98,19 @@ void RSS::GlobalConfig::readConfigFromGConf()
 {
     GConfClient   *client = gconf_client_get_default();
     gchar         *gProxy;
-    
+
     gProxy = gconf_client_get_string (client, GCONF_PROXY, NULL);
     if (gProxy != NULL)
     {
         proxy = gProxy;
         g_free (gProxy);
     }
-    
+
     g_object_unref (client);
 }
 
 /**
- * 
+ *
  * name: unbekannt
  * @param
  * @return
@@ -112,6 +129,30 @@ void RSS::GlobalConfig::writeConfigToGConf()
     {
         gconf_client_unset (client, GCONF_PROXY, NULL);
     }
-    
+
     g_object_unref (client);
 }
+
+/**
+ *
+ * name: unbekannt
+ * @param
+ * @return
+ */
+void RSS::GlobalConfig::buttonCancelActivate()
+{
+    gtk_widget_hide_all (GTK_WIDGET (gtkWindow));
+}
+
+
+/**
+ *
+ * name: unbekannt
+ * @param
+ * @return
+ */
+void RSS::GlobalConfig::buttonSaveActivate()
+{
+    buttonCancelActivate();
+}
+

@@ -30,18 +30,24 @@ namespace RSS
     class GlobalConfig
     {
         private:
-            RSS::Controller  &controller;
-            std::string       proxy;
-            
+            RSS::Controller      &controller;
+            std::string           proxy;
+            GtkWindow            *gtkWindow;
+            ButtonCallbackPtr     btnCbSave;
+            ButtonCallbackPtr     btnCbCancel;
+
             void readConfigFromGConf();
             void writeConfigToGConf();
-            
+
+            void buttonSaveActivate();
+            void buttonCancelActivate();
+
         public:
             GlobalConfig(RSS::Controller  &control);
             ~GlobalConfig();
-            
+
             void showDialog();
-            
+
             inline const std::string& getProxy() const {
                 return proxy;
             }
