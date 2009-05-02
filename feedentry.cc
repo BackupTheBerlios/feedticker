@@ -20,7 +20,7 @@
 
 #include <gtk/gtk.h>
 
-#include "layout.hpp"
+#include "layout/layout.hpp"
 
 #define FEED_OFFSET     10
 #define MOVE_OFFSET      1

@@ -5,6 +5,7 @@ SILENT     = @
 SRC_DIR    = .
 PARSER_DIR = $(SRC_DIR)/parser
 GLADE_DIR  = $(SRC_DIR)/glade
+LAYOUT_DIR = $(SRC_DIR)/layout
 UTIL_DIR   = $(SRC_DIR)/util
 OBJ_DIR    = $(SRC_DIR)/obj
 
@@ -31,11 +32,13 @@ OBJS=$(OBJ_DIR)/main.o		\
      $(OBJ_DIR)/browser.o	\
      $(OBJ_DIR)/message.o	\
      $(OBJ_DIR)/callback.o	\
-     $(OBJ_DIR)/globalconfig.o
+     $(OBJ_DIR)/globalconfig.o	\
+     $(OBJ_DIR)/defaultlayout.o
 
 SRCS=main.cc			\
      popupmenu.cc		\
-     layout.cc			\
+     $(LAYOUT_DIR)/layout.cc	\
+     $(LAYOUT_DIR)/defaultlayout.cc	\
      feedentry.cc		\
      controller.cc		\
      config.cc			\

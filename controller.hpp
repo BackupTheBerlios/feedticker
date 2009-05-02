@@ -26,7 +26,7 @@
 #include <string>
 #include <map>
 
-#include "layout.hpp"
+#include "layout/layout.hpp"
 #include "config.hpp"
 #include "globalconfig.hpp"
 

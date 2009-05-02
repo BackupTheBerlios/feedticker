@@ -26,7 +26,7 @@
 #include <boost/shared_ptr.hpp>
 #include <libxml/parser.h>
 
-#include "layout.hpp"
+#include "layout/layout.hpp"
 
 namespace RSS
 {

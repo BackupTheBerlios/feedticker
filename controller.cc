@@ -390,14 +390,15 @@ void RSS::Controller::addNewTicker()
     cfg->showTickerConfigDialog();
 }
 
-/*
+/**
  * 
- * name: unbekannt
+ * name: RSS::Controller::showGlobalConfig
  * @param
  * @return
  */
 void RSS::Controller::showGlobalConfig()
 {
+	globalConfig.showDialog();
 }
 
 /*
