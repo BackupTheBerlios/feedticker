@@ -22,9 +22,10 @@
 #include <gdk/gdkkeysyms.h>
 
 #include "defaultlayout.hpp"
+#include "message.hpp"
 
 /**
- * 
+ *
  * name: RSS::DefaultLayout::DefaultLayout
  * @param
  * @return
@@ -33,6 +34,23 @@ RSS::DefaultLayout::DefaultLayout(ConfigurationPtr    cfg,
                                   const Controller   &controll)
                    : TickerLayout (cfg, controll)
 {
-    addEntry ("Feedticker", NULL, "feedticker.berlios.de");
+    addEntry ("FeedTicker", NULL, "http://feedticker.berlios.de");
     addEntry ("Copyright(c) 2009  T.Kordelle", NULL, "mailto:feedthk@users.berlios.de");
+}
+
+/**
+ *
+ * name: RSS:TickerLayout::clearFeed
+ * @param
+ * @return
+ */
+void RSS::DefaultLayout::clearFeed()
+{
+    if (timeoutId > 0U)
+    {
+        if (!g_source_remove (timeoutId))
+            SHOW_ERROR_MESSAGE("Can't remove g_timout_source.");
+
+        timeoutId = 0U;
+    }
 }

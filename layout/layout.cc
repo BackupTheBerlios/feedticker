@@ -209,10 +209,13 @@ void RSS::TickerLayout::addEntry(const char* headline,
     }
     else
     {
-        GtkWidget  *favicon = gtk_image_new_from_file (faviconName.c_str ());
         feedEntry->link     = link;
         feedEntry->headline = gtk_button_new_with_label (headline);
-        gtk_button_set_image (GTK_BUTTON(feedEntry->headline), favicon);
+        if (!faviconName.empty())
+        {
+            GtkWidget  *favicon = gtk_image_new_from_file (faviconName.c_str ());
+            gtk_button_set_image (GTK_BUTTON(feedEntry->headline), favicon);
+        }
         gtk_button_set_relief(GTK_BUTTON(feedEntry->headline), GTK_RELIEF_NONE);
         gtk_button_set_focus_on_click(GTK_BUTTON(feedEntry->headline), FALSE);
         g_signal_connect(G_OBJECT(feedEntry->headline), "clicked", G_CALLBACK(url_clicked), (void*)feedEntry.get());
@@ -222,9 +225,6 @@ void RSS::TickerLayout::addEntry(const char* headline,
 
     if (description != NULL)
         gtk_widget_set_tooltip_text (feedEntry->headline, description);
-
-    if (link != NULL)
-        feedEntry->link = link;
 
     int newXpos;
     if (feed.feedList.empty())

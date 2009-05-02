@@ -154,11 +154,13 @@ namespace RSS
             const Controller   &controller;
             GtkWindow          *topLevelWindow;
             Feed                feed;
-            guint               timeoutId;
 
             void   createFeedWindow();
             void   setupKeyboardShortcuts();
             void   resortFeedLayout();
+
+        protected:
+            guint               timeoutId;
 
         public:
             TickerLayout(ConfigurationPtr    cfg,

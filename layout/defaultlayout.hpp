@@ -28,15 +28,18 @@
  */
 namespace RSS
 {
-	class DefaultLayout : protected TickerLayout
-	{
-		public:
-			DefaultLayout(ConfigurationPtr    cfg,
+    class DefaultLayout : public TickerLayout
+    {
+        public:
+            DefaultLayout(ConfigurationPtr    cfg,
                           const Controller   &controll);
-						  
-			virtual ~DefaultLayout() {
-			}
-	};
+
+            virtual ~DefaultLayout() {
+            }
+
+            virtual void clearFeed();
+    };
+    typedef boost::shared_ptr<DefaultLayout>  DefaultLayoutPtr;
 }
 
 #endif /* __DEFAULTLAYOUT_HPP__ */

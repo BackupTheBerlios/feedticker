@@ -37,6 +37,7 @@
 #include "controller.hpp"
 #include "message.hpp"
 #include "parser/parser.hpp"
+#include "layout/defaultlayout.hpp"
 
 /*++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
 #define RSS_RELOAD_TIMEOUT   (15 * 60 * 1000)
@@ -173,7 +174,7 @@ bool RSS::Controller::loadFeed(const std::string  &url,
             SHOW_ERROR_MESSAGE ("curl_easy_setopt failed.", curl_easy_strerror(curlError));
             return false;
         }
-        
+
         if (!globalConfig.getProxy().empty())
         {
             if ((curlError = curl_easy_setopt(curlHandle.get(), CURLOPT_PROXY, globalConfig.getProxy().c_str())) != CURLE_OK)
@@ -182,7 +183,7 @@ bool RSS::Controller::loadFeed(const std::string  &url,
                 return false;
             }
         }
-        
+
         if ((curlError = curl_easy_perform (curlHandle.get())) != CURLE_OK)
         {
             SHOW_ERROR_MESSAGE ("curl_easy_perform failed.", curl_easy_strerror(curlError));
@@ -227,7 +228,7 @@ void RSS::Controller::setupLayoutFeed()
         {
             GObject  *obj = gtk_builder_get_object (getGtkBuilder(), "mi_new_ticker");
             btnNewTicker = ButtonCallbackPtr(new RSS::ButtonCallback(obj, "activate", boost::bind(&RSS::Controller::addNewTicker, this)));
-            
+
             obj             = gtk_builder_get_object (getGtkBuilder(), "mi_global_config");
             btnGlobalConfig = ButtonCallbackPtr(new RSS::ButtonCallback(obj, "activate", boost::bind(&RSS::Controller::showGlobalConfig, this)));
         }
@@ -391,7 +392,7 @@ void RSS::Controller::addNewTicker()
 }
 
 /**
- * 
+ *
  * name: RSS::Controller::showGlobalConfig
  * @param
  * @return
@@ -415,9 +416,8 @@ void RSS::Controller::run()
 
     if (tickerList.empty())
     {
-        Configuration  *cfg = new Configuration(this);
-        cfg->setNewTicker (true);
-        cfg->showTickerConfigDialog();
+        ConfigurationPtr  config(new Configuration(this));
+        layoutMap[DefaultLayoutPtr(new DefaultLayout(config, (*this)))] = config;
     }
     else
     {
