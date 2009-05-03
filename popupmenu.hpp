@@ -34,16 +34,19 @@ namespace RSS
     class PopupMenu
     {
         private:
-            GtkMenu           *popupmenu;
-            ButtonCallbackPtr  bcbPtr;
-            SignalMap  signalMap;
+            const Controller   &controller;
+            GtkMenu            *popupmenu;
+            ButtonCallbackPtr   bcbPtr;
+            SignalMap           signalMap;
 
         public:
-            PopupMenu(GtkBuilder *gtkBuilder, GtkWindow  *windowToBind);
+            PopupMenu(const Controller  &controll, GtkWindow  *windowToBind);
             ~PopupMenu();
 
             void connectWidget(GtkWidget *widget);
             void disconnectWidget(GtkWidget *widget);
+            void disableEditEntry();
+            void enableEditEntry();
 
             bool buttonPressEvent(GdkEvent *event);
     };

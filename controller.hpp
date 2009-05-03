@@ -75,7 +75,7 @@ namespace RSS
             inline guint getTickerCount() const {
                 return layoutMap.size();
             }
-            
+
             inline const GlobalConfig& getGlobalConfig() const {
                 return globalConfig;
             }

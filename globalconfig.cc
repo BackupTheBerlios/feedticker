@@ -85,7 +85,19 @@ void RSS::GlobalConfig::showDialog()
         btnCbCancel = ButtonCallbackPtr(new RSS::ButtonCallback(obj, "clicked", boost::bind(&RSS::GlobalConfig::buttonCancelActivate, this)));
     }
 
+    fill
+
     gtk_widget_show_all (GTK_WIDGET (gtkWindow));
+}
+
+/*
+ *
+ * name: unbekannt
+ * @param
+ * @return
+ */
+void RSS::GlobalConfig::setPreferencesToDialog()
+{
 }
 
 /**

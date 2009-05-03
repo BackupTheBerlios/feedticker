@@ -92,7 +92,7 @@ void RSS::TickerLayout::createFeedWindow()
 
     g_signal_connect(topLevelWindow, "destroy", G_CALLBACK(gtk_main_quit), NULL);
 
-    popupmenu = new PopupMenu(controller.getGtkBuilder(), topLevelWindow);
+    popupmenu = new PopupMenu(controller, topLevelWindow);
 
     config->connectPopupmenu();
 

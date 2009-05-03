@@ -399,7 +399,7 @@ void RSS::Controller::addNewTicker()
  */
 void RSS::Controller::showGlobalConfig()
 {
-	globalConfig.showDialog();
+    globalConfig.showDialog();
 }
 
 /*

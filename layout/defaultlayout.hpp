@@ -37,6 +37,7 @@ namespace RSS
             virtual ~DefaultLayout() {
             }
 
+            virtual void showTicker();
             virtual void clearFeed();
     };
     typedef boost::shared_ptr<DefaultLayout>  DefaultLayoutPtr;

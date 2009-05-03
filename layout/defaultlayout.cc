@@ -54,3 +54,16 @@ void RSS::DefaultLayout::clearFeed()
         timeoutId = 0U;
     }
 }
+
+/**
+ *
+ * name: unbekannt
+ * @param
+ * @return
+ */
+void RSS::DefaultLayout::showTicker()
+{
+    popupmenu->disableEditEntry();
+
+    TickerLayout::showTicker();
+}

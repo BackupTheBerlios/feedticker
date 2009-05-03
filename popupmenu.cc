@@ -22,9 +22,9 @@
 
 #include <boost/bind.hpp>
 
-#include "popupmenu.hpp"
+#include "controller.hpp"
 #include "message.hpp"
-#include "callback.hpp"
+#include "popupmenu.hpp"
 #include "popupmenu.ui"
 
 /*
@@ -33,21 +33,23 @@
  * @param
  * @return
  */
-RSS::PopupMenu::PopupMenu(GtkBuilder *gtkBuilder,
-                          GtkWindow  *windowToBind)
-              : popupmenu(NULL)
+RSS::PopupMenu::PopupMenu(const Controller  &controll,
+                          GtkWindow         *windowToBind)
+              : controller(controll),
+                popupmenu(NULL)
 {
     GError   *error = NULL;
 
-    gint ret_code = gtk_builder_add_from_string (gtkBuilder, popupmenu_ui, -1, &error);
+    gint ret_code = gtk_builder_add_from_string (controller.getGtkBuilder(), popupmenu_ui, -1, &error);
     if (ret_code == 0)
     {
         SHOW_GERROR_MESSAGE ("Unable to create Popupmenu", error);
         return;
     }
 
-    gtk_builder_connect_signals (gtkBuilder, NULL);
-    popupmenu = GTK_MENU (gtk_builder_get_object (gtkBuilder, "popupMenu"));
+    gtk_builder_connect_signals (controller.getGtkBuilder(), NULL);
+
+    popupmenu = GTK_MENU (gtk_builder_get_object (controller.getGtkBuilder(), "popupMenu"));
     gtk_menu_attach_to_widget (popupmenu, GTK_WIDGET(windowToBind), NULL);
 
     bcbPtr = ButtonCallbackPtr(new RSS::ButtonCallback(windowToBind, "button_press_event", boost::bind(&RSS::PopupMenu::buttonPressEvent, this, _1), 1));
@@ -77,6 +79,32 @@ void RSS::PopupMenu::connectWidget(GtkWidget *widget)
     {
         signalMap[widget] = ButtonCallbackPtr(new RSS::ButtonCallback(widget, "button_press_event", boost::bind(&RSS::PopupMenu::buttonPressEvent, this, _1), 1));
     }
+}
+
+/**
+ *
+ * name: unbekannt
+ * @param
+ * @return
+ */
+void RSS::PopupMenu::disableEditEntry()
+{
+    GObject  *obj = gtk_builder_get_object (controller.getGtkBuilder(), "mi_Edit");
+    if (GTK_IS_ACTION (obj))
+        gtk_action_set_sensitive (GTK_ACTION (obj), FALSE);
+}
+
+/**
+ *
+ * name: unbekannt
+ * @param
+ * @return
+ */
+void RSS::PopupMenu::enableEditEntry()
+{
+    GObject  *obj = gtk_builder_get_object (controller.getGtkBuilder(), "mi_Edit");
+    if (GTK_IS_ACTION (obj))
+        gtk_action_set_sensitive (GTK_ACTION (obj), TRUE);
 }
 
 /*
