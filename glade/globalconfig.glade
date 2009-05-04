@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
-<!--Generated with glade3 3.4.5 on Sat May  2 21:44:11 2009 -->
+<!--Generated with glade3 3.4.5 on Mon May  4 16:02:51 2009 -->
 <glade-interface>
   <widget class="GtkWindow" id="globalConfigWindow">
     <child>
@@ -39,53 +39,36 @@
                     <property name="column_spacing">2</property>
                     <property name="row_spacing">2</property>
                     <child>
-                      <widget class="GtkEntry" id="enProxyPassword">
+                      <widget class="GtkEntry" id="enProxyHost">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
-                        <property name="editable">False</property>
                       </widget>
                       <packing>
                         <property name="left_attach">1</property>
                         <property name="right_attach">2</property>
-                        <property name="top_attach">3</property>
-                        <property name="bottom_attach">4</property>
                       </packing>
                     </child>
                     <child>
-                      <widget class="GtkEntry" id="enProxyUser">
+                      <widget class="GtkLabel" id="label2">
                         <property name="visible">True</property>
-                        <property name="can_focus">True</property>
-                        <property name="editable">False</property>
-                      </widget>
-                      <packing>
-                        <property name="left_attach">1</property>
-                        <property name="right_attach">2</property>
-                        <property name="top_attach">2</property>
-                        <property name="bottom_attach">3</property>
-                      </packing>
-                    </child>
-                    <child>
-                      <widget class="GtkLabel" id="label5">
-                        <property name="visible">True</property>
+                        <property name="tooltip_text">http://proxyhost:port</property>
                         <property name="xalign">0</property>
-                        <property name="label" translatable="yes">Password:</property>
+                        <property name="label" translatable="yes">Host:</property>
                       </widget>
                       <packing>
-                        <property name="top_attach">3</property>
-                        <property name="bottom_attach">4</property>
                         <property name="x_options">GTK_FILL</property>
                         <property name="y_options">GTK_FILL</property>
                       </packing>
                     </child>
                     <child>
-                      <widget class="GtkLabel" id="label4">
+                      <widget class="GtkLabel" id="label3">
                         <property name="visible">True</property>
                         <property name="xalign">0</property>
-                        <property name="label" translatable="yes">User:</property>
+                        <property name="label" translatable="yes">Authorization:</property>
                       </widget>
                       <packing>
-                        <property name="top_attach">2</property>
-                        <property name="bottom_attach">3</property>
+                        <property name="top_attach">1</property>
+                        <property name="bottom_attach">2</property>
                         <property name="x_options">GTK_FILL</property>
                         <property name="y_options">GTK_FILL</property>
                       </packing>
@@ -105,38 +88,57 @@
                       </packing>
                     </child>
                     <child>
-                      <widget class="GtkLabel" id="label3">
+                      <widget class="GtkLabel" id="lbProxyUser">
                         <property name="visible">True</property>
                         <property name="xalign">0</property>
-                        <property name="label" translatable="yes">Authorization:</property>
+                        <property name="xpad">6</property>
+                        <property name="label" translatable="yes">User:</property>
                       </widget>
                       <packing>
-                        <property name="top_attach">1</property>
-                        <property name="bottom_attach">2</property>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
                         <property name="x_options">GTK_FILL</property>
                         <property name="y_options">GTK_FILL</property>
                       </packing>
                     </child>
                     <child>
-                      <widget class="GtkLabel" id="label2">
+                      <widget class="GtkLabel" id="lbProxyPassword">
                         <property name="visible">True</property>
-                        <property name="tooltip_text">http://proxyhost:port</property>
                         <property name="xalign">0</property>
-                        <property name="label" translatable="yes">Host:</property>
+                        <property name="xpad">6</property>
+                        <property name="label" translatable="yes">Password:</property>
                       </widget>
                       <packing>
+                        <property name="top_attach">3</property>
+                        <property name="bottom_attach">4</property>
                         <property name="x_options">GTK_FILL</property>
                         <property name="y_options">GTK_FILL</property>
                       </packing>
                     </child>
                     <child>
-                      <widget class="GtkEntry" id="enProxyHost">
+                      <widget class="GtkEntry" id="enProxyUser">
                         <property name="visible">True</property>
                         <property name="can_focus">True</property>
+                        <property name="editable">False</property>
                       </widget>
                       <packing>
                         <property name="left_attach">1</property>
                         <property name="right_attach">2</property>
+                        <property name="top_attach">2</property>
+                        <property name="bottom_attach">3</property>
+                      </packing>
+                    </child>
+                    <child>
+                      <widget class="GtkEntry" id="enProxyPassword">
+                        <property name="visible">True</property>
+                        <property name="can_focus">True</property>
+                        <property name="editable">False</property>
+                      </widget>
+                      <packing>
+                        <property name="left_attach">1</property>
+                        <property name="right_attach">2</property>
+                        <property name="top_attach">3</property>
+                        <property name="bottom_attach">4</property>
                       </packing>
                     </child>
                   </widget>
@@ -152,7 +154,7 @@
                 <property name="spacing">4</property>
                 <property name="layout_style">GTK_BUTTONBOX_END</property>
                 <child>
-                  <widget class="GtkButton" id="button1">
+                  <widget class="GtkButton" id="btnGlobalCancel">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>
@@ -162,7 +164,7 @@
                   </widget>
                 </child>
                 <child>
-                  <widget class="GtkButton" id="button2">
+                  <widget class="GtkButton" id="btnGlobalOk">
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
                     <property name="receives_default">True</property>

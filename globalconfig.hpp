@@ -27,28 +27,45 @@
 
 namespace RSS
 {
+    typedef struct __PROXY_SETTINGS
+    {
+        std::string      url;
+        bool             needAuthorization;
+        std::string      userName;
+        std::string      password;
+        
+        __PROXY_SETTINGS() 
+        : needAuthorization(false) {
+        }
+    } ProxySettings;
+    
     class GlobalConfig
     {
         private:
-            RSS::Controller      &controller;
-            std::string           proxy;
+            const RSS::Controller    &controller;
+            
+            ProxySettings         proxy;
             GtkWindow            *gtkWindow;
             ButtonCallbackPtr     btnCbSave;
             ButtonCallbackPtr     btnCbCancel;
+            ButtonCallbackPtr     btnCbAuthToggled;
 
             void readConfigFromGConf();
             void writeConfigToGConf();
 
             void buttonSaveActivate();
             void buttonCancelActivate();
+            void buttonAuthorizationToggled();
+            
+            void setPreferencesToDialog();
 
         public:
-            GlobalConfig(RSS::Controller  &control);
+            GlobalConfig(const RSS::Controller  &control);
             ~GlobalConfig();
 
             void showDialog();
 
-            inline const std::string& getProxy() const {
+            inline const ProxySettings& getProxy() const {
                 return proxy;
             }
     };

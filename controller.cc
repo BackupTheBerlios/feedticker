@@ -171,22 +171,34 @@ bool RSS::Controller::loadFeed(const std::string  &url,
             ((curlError = curl_easy_setopt(curlHandle.get(), CURLOPT_FOLLOWLOCATION, 1L)) != CURLE_OK)
             )
         {
-            SHOW_ERROR_MESSAGE ("curl_easy_setopt failed.", curl_easy_strerror(curlError));
+            SHOW_ERROR_MESSAGE ("curl_easy_setopt failed.\n%s", curl_easy_strerror(curlError));
             return false;
         }
 
-        if (!globalConfig.getProxy().empty())
+        /* setup proxy */
+        const RSS::ProxySettings  &proxy = globalConfig.getProxy();
+        if (!proxy.url.empty())
         {
-            if ((curlError = curl_easy_setopt(curlHandle.get(), CURLOPT_PROXY, globalConfig.getProxy().c_str())) != CURLE_OK)
+            if ((curlError = curl_easy_setopt(curlHandle.get(), CURLOPT_PROXY, proxy.url.c_str())) != CURLE_OK)
             {
-                SHOW_ERROR_MESSAGE ("curl_easy_setopt (proxy) failed.", curl_easy_strerror(curlError));
+                SHOW_ERROR_MESSAGE ("curl_easy_setopt (proxy) failed.\n%s", curl_easy_strerror(curlError));
                 return false;
+            }
+            if (proxy.needAuthorization)
+            {
+                if (((curlError = curl_easy_setopt(curlHandle.get(), CURLOPT_PROXYUSERNAME, proxy.userName.c_str())) != CURLE_OK)  ||
+                    ((curlError = curl_easy_setopt(curlHandle.get(), CURLOPT_PROXYPASSWORD , proxy.password.c_str())) != CURLE_OK) ||
+                    ((curlError = curl_easy_setopt(curlHandle.get(), CURLOPT_PROXYAUTH, CURLAUTH_ANY)) != CURLE_OK))
+                {
+                    SHOW_ERROR_MESSAGE ("curl_easy_setopt (proxy:username/password) failed.\n%s", curl_easy_strerror(curlError));
+                    return false;
+                }
             }
         }
 
         if ((curlError = curl_easy_perform (curlHandle.get())) != CURLE_OK)
         {
-            SHOW_ERROR_MESSAGE ("curl_easy_perform failed.", curl_easy_strerror(curlError));
+            SHOW_ERROR_MESSAGE ("Cannot load %s.\ncurl_easy_perform: %s.", url.c_str(), curl_easy_strerror(curlError));
             return false;
         }
     }
