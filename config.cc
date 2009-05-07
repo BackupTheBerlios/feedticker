@@ -38,7 +38,7 @@
 static const char         GCONF_TICKER[]  = GCONF_SCHEMA "/ticker/";
 static const std::string  EMPTY_STRING("");
 
-/*
+/**
  * Constructor
  *
  * name: RSS::Configuration::Configuration
@@ -130,9 +130,9 @@ void RSS::Configuration::connectPopupmenu()
     popupRemoveTicker = ButtonCallbackPtr(new RSS::ButtonCallback(obj, "activate", boost::bind(&RSS::Configuration::removeTicker, this)));
 }
 
-/*
+/**
  *
- * name: unbekannt
+ * name: RSS::Configuration::setPreferencesToDialog
  * @param
  * @return
  */
@@ -171,6 +171,9 @@ void RSS::Configuration::setPreferencesToDialog()
 
     entry = GTK_WIDGET (gtk_builder_get_object (controller->getGtkBuilder(), "sbHeight"));
     gtk_spin_button_set_value (GTK_SPIN_BUTTON (entry), ysize);
+
+    entry = GTK_WIDGET (gtk_builder_get_object (controller->getGtkBuilder(), "sbReloadInterval"));
+    gtk_spin_button_set_value (GTK_SPIN_BUTTON (entry), reloadInterval);
 
     GtkTreeIter     toplevel;
     GtkTreeStore   *treestore = GTK_TREE_STORE (gtk_tree_view_get_model (treeView));
@@ -288,15 +291,16 @@ void RSS::Configuration::loadTickerConfig(const std::string &tName)
     gconfDir << GCONF_TICKER << tickerName;
     if (gconf_client_dir_exists (client, gconfDir.str().c_str(), NULL))
     {
-        opacity = gconf_client_get_float (client, getConfigOpacityKey().c_str(), NULL);
-        bSticky = gconf_client_get_bool (client, getConfigKey("sticky_window").c_str(), NULL);
-        bSkip   = gconf_client_get_bool (client, getConfigKey("skip_window").c_str(), NULL);
-        bAbove  = gconf_client_get_bool (client, getConfigKey("above_window").c_str(), NULL);
-        bDock   = gconf_client_get_bool (client, getConfigKey("dock_window").c_str(), NULL);
-        xpos    = gconf_client_get_int (client, getConfigKey("xpos").c_str(), NULL);
-        ypos    = gconf_client_get_int (client, getConfigKey("ypos").c_str(), NULL);
-        xsize   = gconf_client_get_int (client, getConfigKey("xsize").c_str(), NULL);
-        ysize   = gconf_client_get_int (client, getConfigKey("ysize").c_str(), NULL);
+        opacity        = gconf_client_get_float (client, getConfigOpacityKey().c_str(), NULL);
+        bSticky        = gconf_client_get_bool (client, getConfigKey("sticky_window").c_str(), NULL);
+        bSkip          = gconf_client_get_bool (client, getConfigKey("skip_window").c_str(), NULL);
+        bAbove         = gconf_client_get_bool (client, getConfigKey("above_window").c_str(), NULL);
+        bDock          = gconf_client_get_bool (client, getConfigKey("dock_window").c_str(), NULL);
+        xpos           = gconf_client_get_int (client, getConfigKey("xpos").c_str(), NULL);
+        ypos           = gconf_client_get_int (client, getConfigKey("ypos").c_str(), NULL);
+        xsize          = gconf_client_get_int (client, getConfigKey("xsize").c_str(), NULL);
+        ysize          = gconf_client_get_int (client, getConfigKey("ysize").c_str(), NULL);
+        reloadInterval = gconf_client_get_int (client, getConfigKey("reloadInterval").c_str(), NULL);
 
         // would 10000 feeds enough
         for (guint i = 0; i < 10000; i++)
@@ -327,9 +331,9 @@ void RSS::Configuration::loadTickerConfig(const std::string &tName)
     g_object_unref (client);
 }
 
-/*
+/**
  *
- * name: unbekannt
+ * name: RSS::Configuration::saveTickerConfig
  * @param
  * @return
  */
@@ -353,6 +357,7 @@ void RSS::Configuration::saveTickerConfig()
     gconf_client_set_int (client, getConfigKey("ypos").c_str(), ypos, NULL);
     gconf_client_set_int (client, getConfigKey("xsize").c_str(), xsize, NULL);
     gconf_client_set_int (client, getConfigKey("ysize").c_str(), ysize, NULL);
+    gconf_client_set_int (client, getConfigKey("reloadInterval").c_str(), reloadInterval, NULL);
 
     for (guint i = 0; cit != urlMap.end(); i++, cit++)
     {
@@ -364,9 +369,9 @@ void RSS::Configuration::saveTickerConfig()
     }
 }
 
-/*
+/**
  *
- * name: unbekannt
+ * name: RSS::Configuration::buttonSaveActivate
  * @param
  * @return
  */
@@ -413,6 +418,9 @@ void RSS::Configuration::buttonSaveActivate()
 
     entry = GTK_WIDGET (gtk_builder_get_object (controller->getGtkBuilder(), "sbHeight"));
     ysize = gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (entry));
+
+    entry          = GTK_WIDGET (gtk_builder_get_object (controller->getGtkBuilder(), "sbReloadInterval"));
+    reloadInterval = gtk_spin_button_get_value_as_int (GTK_SPIN_BUTTON (entry));
 
     urlMap.clear();
 
@@ -530,11 +538,10 @@ void RSS::Configuration::buttonAddFeedActivate()
     } while (!canClose);
 }
 
-/*
+/**
  *
- * name: unbekannt
- * @param
- * @return
+ * name: RSS::Configuration::buttonRemoveFeedActivate
+ * @return void
  */
 void RSS::Configuration::buttonRemoveFeedActivate()
 {

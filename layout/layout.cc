@@ -39,7 +39,8 @@ RSS::TickerLayout::TickerLayout(ConfigurationPtr    cfg,
                    config(cfg),
                    controller(controll),
                    topLevelWindow(NULL),
-                   timeoutId(0U)
+                   timeoutId(0U),
+                   timeoutReloadId(0U)
 {
     createFeedWindow();
 }

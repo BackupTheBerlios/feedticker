@@ -161,6 +161,7 @@ namespace RSS
 
         protected:
             guint               timeoutId;
+            guint               timeoutReloadId;
 
         public:
             TickerLayout(ConfigurationPtr    cfg,

@@ -22,7 +22,7 @@
 
 #include "settings.hpp"
 
-/*
+/**
  *
  * name: unbekannt
  * @param
@@ -37,7 +37,8 @@ RSS::Settings::Settings()
                xpos(SETTING_NOT_SET),
                ypos(SETTING_NOT_SET),
                xsize(SETTING_NOT_SET),
-               ysize(SETTING_NOT_SET)
+               ysize(SETTING_NOT_SET),
+               reloadInterval(DEFAULT_RELOAD_INTERVAL)
 {
 }
 

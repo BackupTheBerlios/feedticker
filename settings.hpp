@@ -33,7 +33,9 @@ namespace RSS
     class Settings
     {
         protected:
-            static const gdouble  DEFAULT_OPACITY = 0.8;
+            static const gdouble  DEFAULT_OPACITY         = 0.8;
+            /* default reload interval in minutes */
+            static const guint    DEFAULT_RELOAD_INTERVAL = 30;
 
         protected:
             StringStringMap    urlMap;
@@ -47,6 +49,7 @@ namespace RSS
             gint               ypos;
             gint               xsize;
             gint               ysize;
+            guint              reloadInterval;
 
         public:
             Settings();
@@ -79,6 +82,10 @@ namespace RSS
 
             inline const bool isDock() const {
                 return bDock;
+            }
+
+            inline const guint getReloadInterval() const {
+                return reloadInterval;
             }
 
             const gint getXPos() const;
