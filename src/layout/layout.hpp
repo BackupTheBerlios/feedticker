@@ -30,6 +30,7 @@
 
 #include "config.hpp"
 #include "popupmenu.hpp"
+#include "feed/feedentry.hpp"
 
 /**
  *
@@ -78,70 +79,6 @@ namespace RSS
             }
     };
     typedef boost::shared_ptr<AbstractLayout>   AbstractLayoutPtr;
-
-    /**
-     *
-     * name: FeedHead
-     */
-    typedef struct
-    {
-        std::string  title;
-        std::string  description;
-        std::string  link;
-
-        void clear() {
-            title.clear();
-            description.clear();
-            link.clear();
-        }
-    } FeedHead;
-    typedef boost::shared_ptr<FeedHead>  FeedHeadPtr;
-
-    /**
-     *
-     */
-    class FeedEntry
-    {
-        private:
-            const AbstractLayout   &layout;
-            bool                    is_on_layout;
-
-        public:
-            GtkWidget   *vbox;
-            GtkWidget   *headline;
-            GtkWidget   *description;
-            std::string  link;
-            gint         xpos;
-
-            FeedEntry(const AbstractLayout &abstractLayout);
-            virtual ~FeedEntry();
-
-            void moveLeft();
-            bool removeFromLayout();
-            void putOnLayout(int newXpos);
-            bool checkAndPutOnLayout(const boost::shared_ptr<FeedEntry> &lastEntry);
-
-            void connectPopupmenu(PopupMenu *popupmenu);
-
-            inline const bool isVisible() const {
-                return is_on_layout;
-            }
-    };
-
-    typedef boost::shared_ptr<FeedEntry>       FeedEntryPtr;
-    typedef std::list<FeedEntryPtr>            FeedEntryList;
-    typedef boost::shared_ptr<FeedEntryList>   FeedEntryListPtr;
-
-    /**
-     *
-     */
-    typedef struct
-    {
-        FeedHead         feedHead;
-        FeedEntryList    feedList;
-    } Feed;
-
-    typedef boost::shared_ptr<Feed>  FeedPtr;
 
     /**
      *

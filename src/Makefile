@@ -4,7 +4,7 @@ SILENT     = @
 
 SRC_DIR    = .
 PARSER_DIR = $(SRC_DIR)/parser
-GLADE_DIR  = $(SRC_DIR)/glade
+GLADE_DIR  = $(SRC_DIR)/../glade
 LAYOUT_DIR = $(SRC_DIR)/layout
 UTIL_DIR   = $(SRC_DIR)/util
 OBJ_DIR    = $(SRC_DIR)/obj
@@ -87,7 +87,7 @@ clean:
 # compiling rules
 ################################################################################
 $(SRC_DIR)/%.ui: %.glade
-	gtk-builder-convert $< - | ./bin/convert_glade -o $@
+	gtk-builder-convert $< - | ../bin/convert_glade -o $@
 
 $(OBJ_DIR)/%.o: %.c
 	@echo "[C  ] $< is not the way todo."
