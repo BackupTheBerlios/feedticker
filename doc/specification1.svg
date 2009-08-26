@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   id="svg2"
+   sodipodi:version="0.32"
+   inkscape:version="0.46+devel"
+   sodipodi:docname="specification1.svg"
+   inkscape:output_extension="org.inkscape.output.svg.inkscape">
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+    <inkscape:perspective
+       id="perspective2458"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2631"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="261.16024"
+     inkscape:cy="601.85714"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1600"
+     inkscape:window-height="1184"
+     inkscape:window-x="1600"
+     inkscape:window-y="0" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Ebene 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:2.1217041;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect12"
+       width="303.73544"
+       height="79.306862"
+       x="61.203712"
+       y="634.42303" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px"
+       x="76"
+       y="658.36218"
+       id="text2402"><tspan
+         sodipodi:role="line"
+         x="76"
+         y="658.36218"
+         id="tspan2406"
+         style="font-weight:bold">Main Controller</tspan><tspan
+         sodipodi:role="line"
+         x="76"
+         y="670.86218"
+         id="tspan2513">- holds instance of Layout and Feedcontroller</tspan><tspan
+         sodipodi:role="line"
+         x="76"
+         y="683.36218"
+         id="tspan2517">- manage Configuration (Application, Feeds)</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:2.60412192;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect2410"
+       width="175.39589"
+       height="79.395874"
+       x="260.30206"
+       y="280.66425" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px"
+       x="266"
+       y="300.36218"
+       id="text2412"><tspan
+         sodipodi:role="line"
+         id="tspan2414"
+         x="266"
+         y="300.36218"
+         style="font-weight:bold;text-anchor:start;text-align:start">Layout Controller</tspan><tspan
+         sodipodi:role="line"
+         x="266"
+         y="312.86218"
+         id="tspan2560">Gets n references of feedgroups</tspan><tspan
+         sodipodi:role="line"
+         x="266"
+         y="325.36218"
+         id="tspan2562">to display via layout.</tspan><tspan
+         sodipodi:role="line"
+         x="266"
+         y="337.86218"
+         id="tspan2505">Screen is updated by timer.</tspan></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:2.70281219;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect2416"
+       width="180.2972"
+       height="95.297188"
+       x="198.35141"
+       y="430.71359" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px"
+       x="204"
+       y="451.36218"
+       id="text2418"><tspan
+         sodipodi:role="line"
+         id="tspan2420"
+         x="204"
+         y="451.36218"
+         style="font-weight:bold">Feed Controller</tspan><tspan
+         sodipodi:role="line"
+         x="204"
+         y="476.36218"
+         id="tspan2566">creates configurated feedgroups.</tspan><tspan
+         sodipodi:role="line"
+         x="204"
+         y="501.36218"
+         id="tspan2568">Reload of feedgroups is triggered </tspan><tspan
+         sodipodi:role="line"
+         x="204"
+         y="513.86218"
+         id="tspan2570">by time.</tspan><tspan
+         sodipodi:role="line"
+         x="204"
+         y="526.36218"
+         id="tspan2519" /></text>
+    <g
+       id="g2440"
+       transform="translate(154,-15)">
+      <rect
+         y="67.919029"
+         x="295.55682"
+         height="18.886307"
+         width="87.886307"
+         id="rect2426"
+         style="fill:none;stroke:#000000;stroke-width:1.113693;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         id="text2428"
+         y="80.120972"
+         x="302.97165"
+         style="font-size:10px"
+         xml:space="preserve"><tspan
+           y="80.120972"
+           x="302.97165"
+           id="tspan2430"
+           sodipodi:role="line">Abstractlayout</tspan></text>
+    </g>
+    <g
+       id="g2445"
+       transform="translate(98,-14)">
+      <rect
+         y="111.39955"
+         x="237.49733"
+         height="18.005329"
+         width="80.005333"
+         id="rect2422"
+         style="fill:none;stroke:#000000;stroke-width:0.99467063;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         id="text2432"
+         y="123.07312"
+         x="248.7085"
+         style="font-size:10px"
+         xml:space="preserve"><tspan
+           y="123.07312"
+           x="248.7085"
+           id="tspan2434"
+           sodipodi:role="line">GTK Layout</tspan></text>
+    </g>
+    <g
+       id="g2484"
+       transform="translate(94,-14)">
+      <rect
+         y="110.35952"
+         x="350.94238"
+         height="18.005329"
+         width="80.005333"
+         id="rect2422-1"
+         style="fill:none;stroke:#000000;stroke-width:0.99467063;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         id="text2432-6"
+         y="122.12097"
+         x="355.07349"
+         style="font-size:10px"
+         xml:space="preserve"><tspan
+           y="122.12097"
+           x="355.07349"
+           id="tspan2434-3"
+           sodipodi:role="line">Clutter Layout</tspan></text>
+    </g>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:2.38112044;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect2521"
+       width="167.61888"
+       height="109.61888"
+       x="431.19055"
+       y="421.55273" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px"
+       x="444"
+       y="442.36218"
+       id="text2523"><tspan
+         sodipodi:role="line"
+         id="tspan2525"
+         x="444"
+         y="442.36218"
+         style="font-weight:bold">FeedGroup</tspan><tspan
+         sodipodi:role="line"
+         x="444"
+         y="454.86218"
+         id="tspan2527">Group of n feeds will be </tspan><tspan
+         sodipodi:role="line"
+         x="444"
+         y="467.36218"
+         id="tspan2535">shown in one ticker by </tspan><tspan
+         sodipodi:role="line"
+         x="444"
+         y="479.86218"
+         id="tspan2537">layout</tspan><tspan
+         sodipodi:role="line"
+         x="444"
+         y="492.36218"
+         id="tspan2529">Creates feeds and reload</tspan><tspan
+         sodipodi:role="line"
+         x="444"
+         y="504.86218"
+         id="tspan2580">them when triggered by </tspan><tspan
+         sodipodi:role="line"
+         x="444"
+         y="517.36218"
+         id="tspan2582">Feedcontroller.</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:10px"
+       x="505"
+       y="472.36218"
+       id="text2576"><tspan
+         sodipodi:role="line"
+         id="tspan2578"
+         x="505"
+         y="472.36218" /></text>
+    <rect
+       style="fill:none;stroke:#000000;stroke-width:2.45557117;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
+       id="rect2605"
+       width="174.54442"
+       height="66.544434"
+       x="433.22778"
+       y="563.58997" />
+    <text
+       xml:space="preserve"
+       style="font-size:10px"
+       x="443"
+       y="579.36218"
+       id="text2607"><tspan
+         sodipodi:role="line"
+         id="tspan2609"
+         x="443"
+         y="579.36218"
+         style="font-weight:bold">Feed</tspan><tspan
+         sodipodi:role="line"
+         x="443"
+         y="591.86218"
+         id="tspan2611">Holds one RDF feed. </tspan><tspan
+         sodipodi:role="line"
+         x="443"
+         y="604.36218"
+         id="tspan2613">Only informations (feedentry)</tspan><tspan
+         sodipodi:role="line"
+         x="443"
+         y="616.86218"
+         id="tspan2615">needed by the tickers captured.</tspan><tspan
+         sodipodi:role="line"
+         x="443"
+         y="629.36218"
+         id="tspan2617" /></text>
+    <g
+       id="g2661"
+       transform="translate(10,-11)">
+      <rect
+         y="107.37431"
+         x="545.01208"
+         height="17.97574"
+         width="84.975746"
+         id="rect2422-1-2"
+         style="fill:none;stroke:#000000;stroke-width:1.02425992;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0" />
+      <text
+         id="text2432-6-9"
+         y="119.12097"
+         x="549.12842"
+         style="font-size:10px"
+         xml:space="preserve"><tspan
+           id="tspan2657"
+           y="119.12097"
+           x="549.12842"
+           sodipodi:role="line">ncurses Layout</tspan></text>
+    </g>
+  </g>
+</svg>
