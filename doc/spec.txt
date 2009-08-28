@@ -1,0 +1,30 @@
+Simple specification for FeedTicker
+
+History
+- 28.08.2009 T. Kordelle  first version
+
+2. Development
+Describes uses libaries and tools to develop and maintain this
+project.
+
+2.1 Use libraries
+
+2.1.1 General
+This libraries used by all versions (console or UI) of feedticker.
+- STL
+- BOOST
+- curl    (url handling)
+- mcs     (configuration store)
+
+2.1.2 Console
+- CDK 5.x
+- ncurses 5.x
+
+2.1.3 UI
+- GTK+ 2.x  (including GtkBuilder)
+- Clutter   (OpenGL layout)
+
+2.2 Tool
+2.2.1 UI
+For simple dialogdesign glade3 will be used. Resulting glade files will
+be converted, so they can be read by GtkBuilder.
